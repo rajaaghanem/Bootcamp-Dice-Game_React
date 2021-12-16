@@ -7,7 +7,7 @@ import Button from "./components/Button";
 class App extends React.Component {
   state = {
     pointsToWin: 100,
-    dice: [null, null],
+    dice: [0, 0],
     playerTurn: 1,
     currentPlayer: "player 1",
     currentScore1: 0,
@@ -22,8 +22,8 @@ class App extends React.Component {
     const sumDice = firstDice + secoundDice;
     this.setState((state) => {
       return state.playerTurn === 1
-        ? { currentScore1: state.currentScore1 + sumDice }
-        : { currentScore2: state.currentScore2 + sumDice };
+        ? { currentScore1: state.currentScore1 + sumDice, dice:[firstDice,secoundDice] }
+        : { currentScore2: state.currentScore2 + sumDice, dice:[firstDice,secoundDice] };
     });
   };
 
@@ -56,8 +56,8 @@ class App extends React.Component {
           </div>
         </div>
         <div className="settings-container">
-          <Dice onclick={this.diceClick} />
-          <Button title="Hold" onclick={this.handleHoldClick} />
+          <Dice onclick={this.diceClick} firstDice={this.state.dice[0]} secoundDice={this.state.dice[1]}/>
+          <Button title="Hold" onclick={this.handleHoldClick}/>
           <input type="text" />
         </div>
       </>
