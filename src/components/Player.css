@@ -1,0 +1,19 @@
+.palyer-box {
+  width: 50vw;
+  height: 60vh;
+  text-align: center;
+  border-bottom: 0.5rem solid black;
+}
+
+.palyer-box_total-score {
+  border: 0.1rem solid pink;
+  height: 10vh;
+  font-size: 1.2rem;
+  margin: 3rem;
+}
+
+.palyer-box_current-score {
+  border: 0.1rem solid red;
+  height: 10vh;
+  margin: 3rem;
+}

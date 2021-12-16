@@ -1,9 +1,14 @@
 import React from 'react';
+import './Player.css'
 
 class Player extends React.Component {
     render() {
         return(
-            <div>player</div>
+            <div className='palyer-box'>
+                <h1>{this.props.title}</h1>
+                <div className='palyer-box_total-score'>Total Score</div>
+                <div className='palyer-box_current-score'>Current Score</div>
+            </div>
         );
     }
 }
