@@ -4,6 +4,7 @@ import Player from "./components/Player";
 import Dice from "./components/Dice";
 
 class App extends React.Component {
+
   state = {
     pointsToWin: 100,
     dice: [null, null],
@@ -13,20 +14,23 @@ class App extends React.Component {
       { totalScore: 0, currentScore: 0 },
     ],
   };
+
+
   render() {
+    console.log(this.state.players[0].totalScore);
     return (
       <>
         <div className="players-container">
           <div>
-            <Player title="Player 1" />
+            <Player title="Player 1" totalScore={`${this.state.players[0].totalScore}`} currentScore={`${this.state.players[0].currentScore}`}/>
           </div>
           <div>
-            <Player title="Player 2" />
+            <Player title="Player 2" totalScore={`${this.state.players[1].totalScore}`} currentScore={`${this.state.players[1].currentScore}`}/>
           </div>
         </div>
         <div className="settings-container">
           <Dice />
-          <div>hold</div>
+          <div><button>Hold</button></div>
           <input type="text" />
         </div>
       </>

@@ -1,6 +1,13 @@
 .dice_button-design {
-  width: 10rem;
-  height: 5rem;
+  width: 8rem;
+  height: 3rem;
   box-shadow: 1rem 1rem 2rem gray;
   margin: 0.5rem;
+}
+
+.dice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0rem 3rem 3rem 3rem;
 }
