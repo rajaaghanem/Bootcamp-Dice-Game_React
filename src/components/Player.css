@@ -1,6 +1,6 @@
 .palyer-box {
   width: 50vw;
-  height: 50vh;
+  height: 40vh;
   text-align: center;
   border-bottom: 0.1rem solid black;
 }
@@ -8,17 +8,17 @@
 .palyer-box_total-score {
   border: 0.1rem solid pink;
   box-shadow: 0.2rem 0.2rem 1rem gray;
-  height: 12vh;
+  height: 10vh;
   font-size: 1.2rem;
-  margin: 3rem;
+  margin: 1rem;
 }
 
 .palyer-box_current-score {
   border: 0.1rem solid red;
   box-shadow: 0.2rem 0.2rem 1rem gray;
-  height: 12vh;
+  height: 10vh;
   font-size: 1.2rem;
-  margin: 3rem;
+  margin: 1rem;
 }
 
 .the-score {

@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import Player from "./components/Player";
 import Dice from "./components/Dice";
+import Button from "./components/Button";
 
 class App extends React.Component {
 
@@ -20,6 +21,7 @@ class App extends React.Component {
     console.log(this.state.players[0].totalScore);
     return (
       <>
+      <Button title="New Game"/>
         <div className="players-container">
           <div>
             <Player title="Player 1" totalScore={`${this.state.players[0].totalScore}`} currentScore={`${this.state.players[0].currentScore}`}/>
@@ -30,7 +32,7 @@ class App extends React.Component {
         </div>
         <div className="settings-container">
           <Dice />
-          <div><button>Hold</button></div>
+          <Button title="Hold"/>
           <input type="text" />
         </div>
       </>
