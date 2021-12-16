@@ -10,8 +10,8 @@ class Dice extends React.Component {
           Roll Dice
         </button>
         <div className="dices-img-container">
-          <div className={`dice-img${this.props.firstDice} dice-design`}></div>
-          <div className={`dice-img${this.props.secoundDice} dice-design`}></div>
+          <div className={`dice-img${this.props.firstDice} dice-design box-shadow`}></div>
+          <div className={`dice-img${this.props.secoundDice} dice-design box-shadow`}></div>
         </div>
       </div>
     );
