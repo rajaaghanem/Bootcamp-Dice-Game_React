@@ -1,5 +1,6 @@
 .players-container {
   display: flex;
+  position: relative;
 }
 
 .settings-container {
@@ -8,3 +9,23 @@
   align-items: center;
   justify-content: center;
 }
+
+.winner-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 84vh;
+  width: 99.9vw;
+  background-color: grey;
+  text-align: center;
+  background: url("./jonathan-greenaway-TNUEQ73frkA-unsplash.jpg") no-repeat
+    center center/cover;
+  color: rgb(185, 173, 173);
+  font-size: 10rem;
+  text-shadow: 1rem rgb(250, 249, 248);
+}
+
+/* .game-container {
+  background: url("./gettyimages-1132955404-2048x2048.jpg") no-repeat center
+    center/cover;
+} */

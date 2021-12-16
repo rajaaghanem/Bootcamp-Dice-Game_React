@@ -50,10 +50,18 @@ class App extends React.Component {
     });
   };
 
-  onHandleInput=(input)=>{
-    this.setState({pointsToWin: input});
-  }
+  onHandleInput = (input) => {
+    this.setState({ pointsToWin: input });
+  };
 
+  isWin=()=>{
+
+    if(this.state.pointsToWin <= this.state.totalScore1){
+      return(<div className="winner-page">{`player 1 won!!`}</div>);
+    } else if(this.state.pointsToWin <= this.state.totalScore2 ) {
+      return(<div className="winner-page">{`player 2 won!!`}</div>);
+    }
+  }
 
   resetGame = () => {
     this.setState({
@@ -69,11 +77,12 @@ class App extends React.Component {
   };
 
   render() {
-    console.log(this.state.pointsToWin);
+    
     return (
-      <>
+      <div className="game-container">
         <Button title="New Game" onclick={this.resetGame} />
         <div className="players-container">
+        {this.isWin()}
           <div>
             <Player
               title="Player 1"
@@ -96,9 +105,9 @@ class App extends React.Component {
             secoundDice={this.state.dice[1]}
           />
           <Button title="Hold" onclick={this.handleHoldClick} />
-          <Input saveInput={this.onHandleInput}/>
+          <Input saveInput={this.onHandleInput} labelName="Enter win points" />
         </div>
-      </>
+      </div>
     );
   }
 }
