@@ -1,9 +1,11 @@
 import React from 'react';
+import './Dice.css'
+
 
 class Dice extends React.Component {
     render() {
         return(
-            <div>dice</div>
+            <div><button className='dice_button-design'>Roll Dice</button></div>
         );
     }
 }

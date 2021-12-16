@@ -8,9 +8,12 @@ function App() {
         <div><Player title="Player 1"/></div>
         <div><Player title="Player 2"/></div>
     </div>
-    <div>settings</div>
-    <div>dice</div>
-    <div>hold</div>
+    <div className='settings-container'>
+      <Dice/>
+      <div>hold</div>
+      </div>
+    
+    
     </>
   );
 }
