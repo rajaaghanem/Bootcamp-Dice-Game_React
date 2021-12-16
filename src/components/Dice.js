@@ -5,7 +5,7 @@ import './Dice.css'
 class Dice extends React.Component {
     render() {
         return(
-            <div className='dice-container'><button className='dice_button-design'>Roll Dice</button>
+            <div className='dice-container'><button className='dice_button-design' onClick={this.props.onclick}>Roll Dice</button>
             <div>dice images</div>
             </div>
              
