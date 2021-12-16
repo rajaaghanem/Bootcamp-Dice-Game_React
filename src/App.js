@@ -17,10 +17,17 @@ class App extends React.Component {
     totalScore2: 0,
   };
 
+  //select two random numbers between 1 and 6
   diceClick = () => {
     let firstDice = Math.floor(Math.random() * 6) + 1;
     let secoundDice = Math.floor(Math.random() * 6) + 1;
     const sumDice = firstDice + secoundDice;
+
+    this.updateTheDice(firstDice, secoundDice, sumDice);
+  };
+
+  //update the dice and currentScore in state
+  updateTheDice = (firstDice, secoundDice, sumDice) => {
     this.setState((state) => {
       return state.playerTurn === 1
         ? {
@@ -34,6 +41,7 @@ class App extends React.Component {
     });
   };
 
+  //by clicking the hold button pass the turn to the other player
   handleHoldClick = () => {
     this.setState((state) => {
       return state.playerTurn === 2
@@ -50,19 +58,21 @@ class App extends React.Component {
     });
   };
 
+  //update the win point by the players input
   onHandleInput = (input) => {
     this.setState({ pointsToWin: input });
   };
 
-  isWin=()=>{
-
-    if(this.state.pointsToWin <= this.state.totalScore1){
-      return(<div className="winner-page">{`player 1 won!!`}</div>);
-    } else if(this.state.pointsToWin <= this.state.totalScore2 ) {
-      return(<div className="winner-page">{`player 2 won!!`}</div>);
+  //check if one of the players wins, stop the game and send a massege about the winner
+  isWin = () => {
+    if (this.state.pointsToWin <= this.state.totalScore1) {
+      return <div className="winner-page">{`player 1 won!!`}</div>;
+    } else if (this.state.pointsToWin <= this.state.totalScore2) {
+      return <div className="winner-page">{`player 2 won!!`}</div>;
     }
-  }
+  };
 
+  //reset the game state
   resetGame = () => {
     this.setState({
       pointsToWin: 100,
@@ -77,12 +87,11 @@ class App extends React.Component {
   };
 
   render() {
-    
     return (
       <div className="game-container">
         <Button title="New Game" onclick={this.resetGame} />
         <div className="players-container">
-        {this.isWin()}
+          {this.isWin()}
           <div>
             <Player
               title="Player 1"
