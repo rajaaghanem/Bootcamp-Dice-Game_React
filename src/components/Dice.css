@@ -1,7 +1,7 @@
 .dice_button-design {
   width: 8rem;
   height: 3rem;
-  box-shadow: 1rem 1rem 2rem gray;
+  box-shadow: 0.1rem 0.1rem 0.2rem gray;
   margin: 0.5rem;
 }
 

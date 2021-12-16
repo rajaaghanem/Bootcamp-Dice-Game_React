@@ -3,6 +3,7 @@ import React from "react";
 import Player from "./components/Player";
 import Dice from "./components/Dice";
 import Button from "./components/Button";
+import Input from "./components/Input";
 
 class App extends React.Component {
   state = {
@@ -49,6 +50,11 @@ class App extends React.Component {
     });
   };
 
+  onHandleInput=(input)=>{
+    this.setState({pointsToWin: input});
+  }
+
+
   resetGame = () => {
     this.setState({
       pointsToWin: 100,
@@ -63,6 +69,7 @@ class App extends React.Component {
   };
 
   render() {
+    console.log(this.state.pointsToWin);
     return (
       <>
         <Button title="New Game" onclick={this.resetGame} />
@@ -89,7 +96,7 @@ class App extends React.Component {
             secoundDice={this.state.dice[1]}
           />
           <Button title="Hold" onclick={this.handleHoldClick} />
-          <input type="text" />
+          <Input saveInput={this.onHandleInput}/>
         </div>
       </>
     );
