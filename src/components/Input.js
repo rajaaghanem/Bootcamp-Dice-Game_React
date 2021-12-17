@@ -23,6 +23,7 @@ class Input extends React.Component {
           onChange={this.handleInput}
           value={this.state.text}
           onKeyPress={this.handleKey}
+          className="input-design"
         />
       </>
     );

@@ -130,22 +130,6 @@ class App extends React.Component {
           {this.isWin()}
           {this.creatPlayer(1)}
           {this.creatPlayer(2)}
-          {/* <div>
-            <Player
-              classOfTurn={this.state.playerTurn === 1 ? "turn-border" : ""}
-              title="Player 1"
-              totalScore={`${this.state.totalScore1}`}
-              currentScore={`${this.state.currentScore1}`}
-            />
-          </div> */}
-          {/* <div>
-            <Player
-              classOfTurn={this.state.playerTurn === 2 ? "turn-border" : ""}
-              title="Player 2"
-              totalScore={`${this.state.totalScore2}`}
-              currentScore={`${this.state.currentScore2}`}
-            />
-          </div> */}
         </div>
         <div className="settings-container">
           <Dice
