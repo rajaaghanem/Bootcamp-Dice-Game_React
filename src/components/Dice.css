@@ -1,9 +1,12 @@
 .dice_button-design {
-  width: 8rem;
+  width: 12rem;
   height: 5rem;
-  box-shadow: 0.1rem 0.1rem 0.2rem gray;
+  box-shadow: 0.3rem 0.3rem 0.6rem gray;
   margin: 0.5rem;
   font-size: 1.5rem;
+  background-color: darkcyan;
+  border-radius: 1.2rem;
+  border: 0.2rem solid gray;
 }
 
 .dice-container {
@@ -16,6 +19,7 @@
 .dice-design {
   width: 5rem;
   height: 5rem;
+  border-radius: 0.5rem;
 }
 
 .dices-img-container {

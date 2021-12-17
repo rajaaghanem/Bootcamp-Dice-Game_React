@@ -18,14 +18,15 @@
   width: 99.9vw;
   background-color: grey;
   text-align: center;
-  background: url("./jonathan-greenaway-TNUEQ73frkA-unsplash.jpg") no-repeat
-    center center/cover;
+  background: url("./winnig.png") no-repeat center center/cover;
   color: rgb(185, 173, 173);
   font-size: 10rem;
   text-shadow: 1rem rgb(250, 249, 248);
 }
 
-/* .game-container {
-  background: url("./gettyimages-1132955404-2048x2048.jpg") no-repeat center
-    center/cover;
-} */
+.game-container {
+  /* background: url("./istockphoto-1024064424-612x612.jpg") no-repeat center
+    center/cover; */
+  background-color: black;
+  height: 100vh;
+}

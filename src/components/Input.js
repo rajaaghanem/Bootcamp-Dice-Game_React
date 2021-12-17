@@ -1,4 +1,5 @@
 import React from "react";
+import "./Input.css";
 
 class Input extends React.Component {
   state = { text: " " };
@@ -15,7 +16,7 @@ class Input extends React.Component {
   }
 
   render() {
-    return <><label>{this.props.labelName}</label><input type="text" onChange={this.handleInput} value={this.state.text}
+    return <><label className="label-design">{this.props.labelName}</label><input type="text" onChange={this.handleInput} value={this.state.text}
         onKeyPress={this.handleKey} /></>;
   }
 }
