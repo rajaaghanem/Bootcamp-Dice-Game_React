@@ -8,7 +8,7 @@ class Dice extends React.Component {
   // start shake dice animation
   shaketheDice=()=>{
     this.setState({isClicke: true});
-    this. resetState();
+    this.resetState();
     return (this.props.onclick());
   }
 
