@@ -1,7 +1,8 @@
 .palyer-box {
-  width: 50vw;
+  width: 48vw;
   height: 35vh;
   text-align: center;
+  margin: 1rem;
 }
 
 .palyer-box_total-score {
@@ -22,4 +23,11 @@
 
 .the-score {
   padding: 0.5rem;
+}
+
+.turn-border {
+  border-left: 2px solid rgb(64, 160, 204);
+  border-right: 2px solid rgb(64, 160, 204);
+  border-top: 2px solid rgb(64, 160, 204);
+  border-radius: 2rem;
 }

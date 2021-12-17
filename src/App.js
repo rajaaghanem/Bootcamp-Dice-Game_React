@@ -22,9 +22,20 @@ class App extends React.Component {
     let firstDice = Math.floor(Math.random() * 6) + 1;
     let secoundDice = Math.floor(Math.random() * 6) + 1;
     const sumDice = firstDice + secoundDice;
-
+    const isDoubleSix = (firstDice===6 && secoundDice===6)? true:false;
     this.updateTheDice(firstDice, secoundDice, sumDice);
+    this.ResetTotalScore(isDoubleSix);
   };
+
+  //reset totalScore and pass the turn is we got a double six
+  ResetTotalScore=(boolDoubleSix)=>{
+    if(boolDoubleSix){
+      this.setState((state)=>{
+        return state.playerTurn === 1 ? {totalScore1 : 0, currentScore1:0, playerTurn:2} : {totalScore2 : 0, currentScore2:0, playerTurn:1}
+      })
+    }
+  }
+
 
   //update the dice and currentScore in state
   updateTheDice = (firstDice, secoundDice, sumDice) => {
@@ -94,6 +105,7 @@ class App extends React.Component {
           {this.isWin()}
           <div>
             <Player
+              classOfTurn = {this.state.playerTurn === 1? "turn-border": ""}
               title="Player 1"
               totalScore={`${this.state.totalScore1}`}
               currentScore={`${this.state.currentScore1}`}
@@ -101,6 +113,7 @@ class App extends React.Component {
           </div>
           <div>
             <Player
+              classOfTurn = {this.state.playerTurn === 2? "turn-border": ""}
               title="Player 2"
               totalScore={`${this.state.totalScore2}`}
               currentScore={`${this.state.currentScore2}`}

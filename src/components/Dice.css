@@ -1,8 +1,9 @@
 .dice_button-design {
   width: 8rem;
-  height: 3rem;
+  height: 5rem;
   box-shadow: 0.1rem 0.1rem 0.2rem gray;
   margin: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .dice-container {
@@ -13,8 +14,8 @@
 }
 
 .dice-design {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
 }
 
 .dices-img-container {

@@ -1,9 +1,14 @@
 import React from "react";
 import "./Dice.css";
 
+
 class Dice extends React.Component {
+  
+// playDiceSound=()=>{
+//   return (this.props.onclick());
+// }
+
   render() {
-    console.log(this.props.firstDice);
     return (
       <div className="dice-container">
         <button className="dice_button-design" onClick={this.props.onclick}>
