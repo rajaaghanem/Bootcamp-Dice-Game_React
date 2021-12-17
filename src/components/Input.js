@@ -10,14 +10,22 @@ class Input extends React.Component {
   };
 
   //save the user input when the user press enter
-  handleKey=(event)=>{
-    if(event.key === "Enter")
-    return (this.props.saveInput(this.state.text));
-  }
+  handleKey = (event) => {
+    if (event.key === "Enter") return this.props.saveInput(this.state.text);
+  };
 
   render() {
-    return <><label className="label-design">{this.props.labelName}</label><input type="text" onChange={this.handleInput} value={this.state.text}
-        onKeyPress={this.handleKey} /></>;
+    return (
+      <>
+        <label className="label-design">{this.props.labelName}</label>
+        <input
+          type="text"
+          onChange={this.handleInput}
+          value={this.state.text}
+          onKeyPress={this.handleKey}
+        />
+      </>
+    );
   }
 }
 
