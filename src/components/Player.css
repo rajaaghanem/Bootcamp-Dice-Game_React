@@ -6,6 +6,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #008b8b;
+  font-size: 1.2rem;
 }
 
 .palyer-box_total-score {
@@ -38,4 +40,5 @@
   border-right: 0.3rem solid rgb(109, 7, 7);
   border-top: 0.3rem solid rgb(109, 7, 7);
   border-radius: 2rem;
+  background-color: rgba(15, 14, 14, 0.842);
 }
