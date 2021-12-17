@@ -1,9 +1,9 @@
 import "./App.css";
 import React from "react";
-import Player from "./components/Player";
-import Dice from "./components/Dice";
-import Button from "./components/Button";
-import Input from "./components/Input";
+import Player from "./components/Player/Player";
+import Dice from "./components/Dice/Dice";
+import Button from "./components/Button/Button";
+import Input from "./components/Input/Input";
 
 class App extends React.Component {
   state = {
