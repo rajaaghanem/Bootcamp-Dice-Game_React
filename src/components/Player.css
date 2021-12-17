@@ -15,7 +15,6 @@
 }
 
 .palyer-box_current-score {
-  /* border: 0.1rem solid red; */
   color: blanchedalmond;
   width: 20rem;
 }
@@ -23,7 +22,7 @@
 .palyer-box_score-design {
   height: 10vh;
   border-radius: 1.2rem;
-  margin: 0.5rem;
+  margin: 1rem;
   font-size: 2rem;
   font-weight: bold;
   box-shadow: 0.2rem 0.2rem 1rem gray;
