@@ -12,7 +12,7 @@ class Dice extends React.Component {
     return (
       <div className="dice-container">
         <button className="dice_button-design" onClick={this.props.onclick}>
-          Roll Dice
+        <i className="fas fa-dice fa-2x"></i>Roll Dice
         </button>
         <div className="dices-img-container">
           <div className={`dice-img${this.props.firstDice} dice-design box-shadow`}></div>
