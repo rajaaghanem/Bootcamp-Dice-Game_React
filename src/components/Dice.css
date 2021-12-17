@@ -23,7 +23,10 @@
 }
 
 .dices-img-container {
+  width: 15rem;
   display: flex;
+  justify-content: space-around;
+  margin: 0.5rem;
 }
 
 .dices-img-container > div {
@@ -62,4 +65,20 @@
 .fa-dice {
   padding: 0.5rem;
   height: 0.5rem;
+}
+
+.shake-dice {
+  animation: shake 1s linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(90deg);
+  }
 }

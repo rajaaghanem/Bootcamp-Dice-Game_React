@@ -53,6 +53,7 @@ class App extends React.Component {
     });
   };
 
+  // creating a player component
   creatPlayer(numberOfPlayer) {
     return (
       <div>
