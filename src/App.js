@@ -53,6 +53,29 @@ class App extends React.Component {
     });
   };
 
+  creatPlayer(numberOfPlayer) {
+    return (
+      <div>
+        <Player
+          classOfTurn={
+            this.state.playerTurn === numberOfPlayer ? "turn-border" : ""
+          }
+          title={`Player ${numberOfPlayer} `}
+          totalScore={
+            numberOfPlayer === 1
+              ? `${this.state.totalScore1}`
+              : `${this.state.totalScore2}`
+          }
+          currentScore={
+            numberOfPlayer === 1
+              ? `${this.state.currentScore1}`
+              : `${this.state.currentScore2}`
+          }
+        />
+      </div>
+    );
+  }
+
   //by clicking the hold button pass the turn to the other player
   handleHoldClick = () => {
     this.setState((state) => {
@@ -104,22 +127,24 @@ class App extends React.Component {
         <Button title="New Game" onclick={this.resetGame} />
         <div className="players-container">
           {this.isWin()}
-          <div>
+          {this.creatPlayer(1)}
+          {this.creatPlayer(2)}
+          {/* <div>
             <Player
               classOfTurn={this.state.playerTurn === 1 ? "turn-border" : ""}
               title="Player 1"
               totalScore={`${this.state.totalScore1}`}
               currentScore={`${this.state.currentScore1}`}
             />
-          </div>
-          <div>
+          </div> */}
+          {/* <div>
             <Player
               classOfTurn={this.state.playerTurn === 2 ? "turn-border" : ""}
               title="Player 2"
               totalScore={`${this.state.totalScore2}`}
               currentScore={`${this.state.currentScore2}`}
             />
-          </div>
+          </div> */}
         </div>
         <div className="settings-container">
           <Dice
