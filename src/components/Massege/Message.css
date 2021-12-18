@@ -1,0 +1,16 @@
+.massege-box {
+  position: absolute;
+  top: 20vh;
+  left: 20vw;
+  background-color: cornflowerblue;
+  width: 50vw;
+  height: 50vh;
+  z-index: 2;
+  border-radius: 2rem;
+  text-align: center;
+  font-size: 5rem;
+}
+
+.hide-massege {
+  display: none;
+}

@@ -4,6 +4,7 @@ import Player from "./components/Player/Player";
 import Dice from "./components/Dice/Dice";
 import Button from "./components/Button/Button";
 import Input from "./components/Input/Input";
+import Massege from "./components/Massege/Massege";
 
 class App extends React.Component {
   state = {
@@ -15,6 +16,7 @@ class App extends React.Component {
     currentScore2: 0,
     totalScore1: 0,
     totalScore2: 0,
+    doubleSix: false,
   };
 
   //select two random numbers between 1 and 6
@@ -24,8 +26,22 @@ class App extends React.Component {
     const sumDice = firstDice + secoundDice;
     const isDoubleSix = firstDice === 6 && secoundDice === 6 ? true : false;
     this.updateTheDice(firstDice, secoundDice, sumDice);
+    this.handleDoubleSix(isDoubleSix);
     this.ResetTotalScore(isDoubleSix);
   };
+
+  handleDoubleSix=(isDoubleSix)=>{
+    if(isDoubleSix){
+      this.setState({doubleSix: true});
+      this.showMassege();
+    }
+  }
+
+  showMassege=()=>{
+    setTimeout(() => {
+      this.setState({doubleSix: false});
+    }, 2000);
+  }
 
   //reset totalScore and pass the turn is we got a double six
   ResetTotalScore = (boolDoubleSix) => {
@@ -137,6 +153,7 @@ class App extends React.Component {
             firstDice={this.state.dice[0]}
             secoundDice={this.state.dice[1]}
           />
+          {this.state.doubleSix? <Massege/> : null}
           <Button title="Hold" onclick={this.handleHoldClick} />
           <Input saveInput={this.onHandleInput} labelName="Enter win points" />
         </div>
