@@ -20,7 +20,6 @@ class Input extends React.Component {
         <label className="label-design">{this.props.labelName}</label>
         <input
           type="text"
-          defaultValue = "100"
           onChange={this.handleInput}
           value={this.state.text}
           onKeyPress={this.handleKey}

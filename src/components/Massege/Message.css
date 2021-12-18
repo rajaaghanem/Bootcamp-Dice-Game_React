@@ -2,15 +2,11 @@
   position: absolute;
   top: 20vh;
   left: 20vw;
-  background-color: cornflowerblue;
+  background-color: #008b8b;
   width: 50vw;
   height: 50vh;
   z-index: 2;
   border-radius: 2rem;
   text-align: center;
   font-size: 5rem;
-}
-
-.hide-massege {
-  display: none;
 }

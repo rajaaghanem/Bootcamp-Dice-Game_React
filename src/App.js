@@ -30,6 +30,7 @@ class App extends React.Component {
     this.ResetTotalScore(isDoubleSix);
   };
 
+  //set doubleSix to true if we got double sixes
   handleDoubleSix=(isDoubleSix)=>{
     if(isDoubleSix){
       this.setState({doubleSix: true});
@@ -37,6 +38,7 @@ class App extends React.Component {
     }
   }
 
+  //show the massege to the player for 2 secounds 
   showMassege=()=>{
     setTimeout(() => {
       this.setState({doubleSix: false});
@@ -118,9 +120,9 @@ class App extends React.Component {
   //check if one of the players wins, stop the game and send a massege about the winner
   isWin = () => {
     if (this.state.pointsToWin <= this.state.totalScore1) {
-      return <div className="winner-page">{`player 1 won!!`}</div>;
+      return <div className="winner-page">{`player 1 won!!`}<i className="fas fa-trophy"></i></div>;
     } else if (this.state.pointsToWin <= this.state.totalScore2) {
-      return <div className="winner-page">{`player 2 won!!`}</div>;
+      return <div className="winner-page">{`player 2 won!!`}<i className="fas fa-trophy"></i></div>;
     }
   };
 
