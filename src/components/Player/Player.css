@@ -42,3 +42,22 @@
   border-radius: 2rem;
   background-color: rgba(32, 30, 30, 0.842);
 }
+
+@media (max-width: 500px) {
+  .palyer-box {
+    height: 30vh;
+  }
+  .palyer-box_score-design {
+    height: 5vh;
+    font-size: 1rem;
+  }
+  .palyer-box_total-score {
+    width: 20vh;
+  }
+  .palyer-box_current-score {
+    width: 14vh;
+  }
+  .the-score {
+    padding: 0.3rem;
+  }
+}

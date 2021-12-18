@@ -29,3 +29,17 @@
   height: 100vh;
   position: relative;
 }
+
+@media (max-width: 500px) {
+  .settings-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .players-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

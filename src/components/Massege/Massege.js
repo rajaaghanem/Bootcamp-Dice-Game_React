@@ -7,7 +7,7 @@ class Massege extends React.Component {
       return (
         <div className={`massege-box`}>
          <p>You got double sixes <br/>
-          you have lost all your points!!<i class="far fa-frown-open"></i></p> 
+          you have lost all your points!!<i className="far fa-frown-open"></i></p> 
         </div>
       );
     }

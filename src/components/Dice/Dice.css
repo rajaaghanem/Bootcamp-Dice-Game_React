@@ -82,3 +82,18 @@
     transform: rotate(90deg);
   }
 }
+
+@media (max-width: 500px) {
+  .dice_button-design {
+    width: 13rem;
+    height: 4rem;
+    font-size: 1.4rem;
+  }
+  .dice-design {
+    width: 4rem;
+    height: 4rem;
+  }
+  .dice-container {
+    margin: 0.2rem;
+  }
+}
