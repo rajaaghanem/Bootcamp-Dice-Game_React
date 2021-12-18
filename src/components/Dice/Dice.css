@@ -85,9 +85,9 @@
 
 @media (max-width: 500px) {
   .dice_button-design {
-    width: 13rem;
+    width: 11rem;
     height: 4rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
   }
   .dice-design {
     width: 4rem;

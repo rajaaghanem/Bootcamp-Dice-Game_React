@@ -45,7 +45,8 @@
 
 @media (max-width: 500px) {
   .palyer-box {
-    height: 30vh;
+    height: 20vh;
+    font-size: 1rem;
   }
   .palyer-box_score-design {
     height: 5vh;

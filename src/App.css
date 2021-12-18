@@ -33,9 +33,10 @@
 @media (max-width: 500px) {
   .settings-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 1.5rem;
   }
   .players-container {
     flex-direction: column;
