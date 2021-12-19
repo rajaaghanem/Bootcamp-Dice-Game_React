@@ -73,7 +73,7 @@ class App extends React.Component {
   // creating a player component
   creatPlayer(numberOfPlayer) {
     return (
-      <div>
+      <>
         <Player
           classOfTurn={
             this.state.playerTurn === numberOfPlayer ? "turn-border" : ""
@@ -90,7 +90,7 @@ class App extends React.Component {
               : `${this.state.currentScore2}`
           }
         />
-      </div>
+      </>
     );
   }
 
