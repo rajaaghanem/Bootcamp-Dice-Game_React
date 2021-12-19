@@ -11,7 +11,6 @@ class App extends React.Component {
     pointsToWin: 100,
     dice: [0, 0],
     playerTurn: 1,
-    currentPlayer: "player 1",
     currentScore1: 0,
     currentScore2: 0,
     totalScore1: 0,
@@ -157,7 +156,7 @@ class App extends React.Component {
           />
           {this.state.doubleSix? <Massege/> : null}
           <Button title="Hold" onclick={this.handleHoldClick} />
-          <Input saveInput={this.onHandleInput} labelName="Enter win points" />
+          <Input saveInput={this.onHandleInput} labelName="Enter points to win " />
         </div>
       </div>
     );

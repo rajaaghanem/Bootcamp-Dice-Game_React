@@ -2,22 +2,31 @@ import React from "react";
 import "./Dice.css";
 
 class Dice extends React.Component {
-
-  state={isClicke: false}
+  state = { isClicke: false };
 
   // start shake dice animation
-  shaketheDice=()=>{
-    this.setState({isClicke: true});
+  shaketheDice = () => {
+    this.setState({ isClicke: true });
     this.resetState();
-    return (this.props.onclick());
-  }
+    return this.props.onclick();
+  };
 
   //reset state to stop the shake animation
-  resetState(){
+  resetState() {
     setTimeout(() => {
-      this.setState({isClicke: false});
+      this.setState({ isClicke: false });
     }, 500);
-    
+  }
+
+  //create a dice
+  creatTheDice(numOfRoll) {
+    return (
+      <div
+        className={`dice-img${numOfRoll} dice-design box-shadow ${
+          this.state.isClicke ? "shake-dice" : ""
+        }`}
+      ></div>
+    );
   }
 
   render() {
@@ -27,18 +36,13 @@ class Dice extends React.Component {
           <i className="fas fa-dice fa-2x"></i>Roll Dice
         </button>
         <div className="dices-img-container">
-          <div
-            className={`dice-img${this.props.firstDice} dice-design box-shadow ${this.state.isClicke? "shake-dice": ""}`}
-          ></div>
-          <div
-            className={`dice-img${this.props.secoundDice} dice-design box-shadow ${this.state.isClicke? "shake-dice": ""}`}
-          ></div>
+          {this.creatTheDice(this.props.firstDice)}
+
+          {this.creatTheDice(this.props.secoundDice)}
         </div>
       </div>
- 
     );
   }
-
 }
 
 export default Dice;
