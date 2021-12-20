@@ -2,7 +2,7 @@ import React from "react";
 import "./Input.css";
 
 class Input extends React.Component {
-  state = { text: " " };
+  state = { text: "100" };
 
   //update the state text by the user input
   handleInput = (event) => {
